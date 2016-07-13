@@ -5,7 +5,7 @@ var T = require('./index'),
   followList,
   whitelistedWords;
 
-followList = [33057154, 1605891337, 609718712, 14894250, 2792078121, 18185124, 26554000, 2332401396, 468290519, 409435591, 233430873, 1705885393, 159642250, 14426771, 2604068238, 1890842214, 17093617, 2670122929, 259725229, 25458378]; //JeffSheehan, GrowthHackerAm, GrowthHackingWP, fab_brianson, m1lem, jeffbullas, RebekahRadice, loveandstartups, SharonTighe, Onboardly, Notebook, GrowthHackers, GrowthHacker, SeanEllis, thepressfarm, seotomize, hootsuite, GrowthHackerSEO, ValaAfshar, AskAaronLee
+followList = [3007932069, 1611709608, 2182824348, 2231915576, 1091131705, 1071790574, 280992438, 409425184, 770429666, 309179868, 286191576, 59597127, 251811933]; //WilliamsBob75, Andrew_Marcinko, BigDSoccer, magee18, bardsblond, YesThatBrooke, RobStoneONFOX, KidWeil, BMcBride20, LeanderAlphabet, TheOffsideRules, JeffreyCarlisle, Nic_Bodiford 
 
 var statusStream = T.stream('statuses/filter', {
   follow: followList
@@ -17,21 +17,22 @@ statusStream.on('tweet', function(tweet) {
     console.log(tweet.text);
     var lowercaseTweet = tweet.text.toLowerCase();
     if (
-      lowercaseTweet.indexOf('social') === -1 &&
-      lowercaseTweet.indexOf('market') === -1 &&
-      lowercaseTweet.indexOf('brand') === -1 &&
-      lowercaseTweet.indexOf('onboard') === -1 &&
-      lowercaseTweet.indexOf('lead') === -1 &&
-      lowercaseTweet.indexOf('seo') === -1 &&
-      lowercaseTweet.indexOf('sell') === -1 &&
-      lowercaseTweet.indexOf('content') === -1 &&
-      lowercaseTweet.indexOf('analytics') === -1 &&
-      lowercaseTweet.indexOf('growth') === -1 &&
-      lowercaseTweet.indexOf('startup') === -1 &&
-      lowercaseTweet.indexOf('entrepreneur') === -1 &&
-      lowercaseTweet.indexOf('blog') === -1 &&
-      tweet.user.id !== 2246032237 && //iamjtsuccess
-      tweet.user.id !== 25458378 //AskAaronLee
+      lowercaseTweet.indexOf('soccer') === -1 &&
+      lowercaseTweet.indexOf('mls') === -1 &&
+      lowercaseTweet.indexOf('usmnt') === -1 &&
+      lowercaseTweet.indexOf('uswnt') === -1 &&
+      lowercaseTweet.indexOf('epl') === -1 &&
+      lowercaseTweet.indexOf('futbol') === -1 
+      // &&
+      // lowercaseTweet.indexOf('fcdallas') === -1 &&
+      // lowercaseTweet.indexOf('content') === -1 &&
+      // lowercaseTweet.indexOf('analytics') === -1 &&
+      // lowercaseTweet.indexOf('growth') === -1 &&
+      // lowercaseTweet.indexOf('startup') === -1 &&
+      // lowercaseTweet.indexOf('entrepreneur') === -1 &&
+      // lowercaseTweet.indexOf('blog') === -1 &&
+      // tweet.user.id !== 2246032237 && //iamjtsuccess
+      // tweet.user.id !== 25458378 //AskAaronLee
     ) {
       console.log('No status update. Did not pass sanity check.')
       console.log('-----');
