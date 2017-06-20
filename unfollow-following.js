@@ -3,7 +3,7 @@ var T = require('./index.js'),
   stopId = argv['stopId'] || -1; //348336389 = omgisarcasm
 
 T.get('friends/ids', {
-  screen_name: 'geekykaran',
+  screen_name: 'sqwadfan',
   count: 2000
 }, function(err, data, response) {
   var idList = data.ids,
