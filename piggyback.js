@@ -39,7 +39,7 @@ statusStream.on('tweet', function(tweet) {
       return;
     }
     T.post('statuses/update', {
-      status: tweet.text
+      // status: tweet.text
     }, function(err, data, response) {
       if (err) {
         console.log('Error updating status')
